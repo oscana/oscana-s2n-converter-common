@@ -1,0 +1,12 @@
+<routes>
+#if ($convertMode == 1)
+ #foreach($route in $routes)
+   <match path="$!{route.path}.do"#if($!route.controller) controller="$!route.controller"#end action="$!route.action"#if($!route.forwardPath) controller="nabcommon.JSPForward" jsp="${StringUtils.convertPathInternalForward($route.forwardPath)}" #end />
+ #end
+#end
+#if ($convertMode != 1)
+ #foreach($route in $routes)
+   <match path="$!{route.path}"#if($!route.controller) controller="$!route.controller"#end action="$!route.action" />
+ #end
+#end
+</routes>
