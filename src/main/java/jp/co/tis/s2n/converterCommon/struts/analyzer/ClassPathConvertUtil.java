@@ -43,7 +43,7 @@ public class ClassPathConvertUtil {
         Reader fileReader = null;
         CSVReader csvReader = null;
         try {
-            fileReader = new InputStreamReader( ClassLoader.getSystemResourceAsStream(fileName));
+            fileReader = new InputStreamReader( ClassLoader.getSystemResourceAsStream(fileName), "UTF-8");
             csvReader = new CSVReader(fileReader);
             List<String[]> records = csvReader.readAll();
 
@@ -72,7 +72,7 @@ public class ClassPathConvertUtil {
         Reader fileReader = null;
         CSVReader csvReader = null;
         try {
-            fileReader = new InputStreamReader( ClassLoader.getSystemResourceAsStream(fileName));
+            fileReader = new InputStreamReader( ClassLoader.getSystemResourceAsStream(fileName), "UTF-8");
             csvReader = new CSVReader(fileReader);
             List<String[]> records = csvReader.readAll();
 
@@ -104,7 +104,7 @@ public class ClassPathConvertUtil {
             if (fileName != null) {
                 reader = new FileReader(fileName);
             } else {
-                reader = new InputStreamReader(ClassLoader.getSystemResourceAsStream(DEFAULT_MAPPING_FILE));
+                reader = new InputStreamReader(ClassLoader.getSystemResourceAsStream(DEFAULT_MAPPING_FILE), "UTF-8");
             }
 
             csvReader = new CSVReader(reader);

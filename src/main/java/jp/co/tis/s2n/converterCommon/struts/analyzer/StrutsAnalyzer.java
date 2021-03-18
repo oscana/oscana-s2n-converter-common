@@ -353,7 +353,7 @@ public class StrutsAnalyzer {
         BufferedReader buffReader = null;
         List<String> list = new ArrayList<>();
         try {
-            buffReader = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream(filePath)));
+            buffReader = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream(filePath), "UTF-8"));
             String strTmp = "";
             while ((strTmp = buffReader.readLine()) != null) {
                 list.add(strTmp);
