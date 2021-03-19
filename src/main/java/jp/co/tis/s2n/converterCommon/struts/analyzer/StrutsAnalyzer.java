@@ -282,7 +282,7 @@ public class StrutsAnalyzer {
     public static void writeUnSupportedLog(Document config) throws IOException {
         Element root = config.getDocumentElement();
         configValidationSupportList = readText2List(
-                "jp/co/tis/s2n/converterCommon/struts/analyzer/StrutsSupportTagList.txt");
+                "StrutsSupportTagList.txt");
         writeUnSupportedLogSub(root, "/", config);
     }
 
