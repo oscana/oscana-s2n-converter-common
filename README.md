@@ -1,1 +1,1 @@
-# s2n-convertercommon
+# oscana-s2n-converter-common
